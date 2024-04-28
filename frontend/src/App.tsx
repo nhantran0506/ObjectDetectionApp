@@ -39,8 +39,8 @@ function App() {
         </div>
         <div className="flex flex-row text-xl justify-between">
         <h2 className="ml-20"></h2>
-        <h2 className="ml-5 text-base">21110762 - Cao Thai Dat</h2>
-        <h2 className="text-base">21110792 - Dang Trung Phuong</h2>
+        <h2 className="ml-5 text-base">21110790 - Tran Trong Nhan</h2>
+        <h2 className="text-base">21110809 - Nguyen Phuoc Truong</h2>
         </div>
         <div className="mb-4">
           <video ref={videoRef} className="w-full h-full object-cover rounded-md" autoPlay />
