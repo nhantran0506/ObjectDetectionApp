@@ -491,7 +491,7 @@ def draw_boxes(image, boxes, labels, obj_baseline=0.05,verbose=False):
 
     return image
 
-model = load_model("yolov2_4epoch.h5")
+model = load_model("weights_yolo_on_voc2012.h5")
 def predict(image):
     import numpy as np
     import matplotlib.pyplot as plt
@@ -506,13 +506,12 @@ def predict(image):
     netout         = y_pred[0]
     outputRescaler = OutputRescaler(ANCHORS=ANCHORS)
     netout_scale   = outputRescaler.fit(netout)
-    obj_threshold = 0.03
+    obj_threshold = 0.5
     boxes = find_high_class_probability_bbox(netout_scale,obj_threshold)
 
     iou_threshold = 0.01
     final_boxes = nonmax_suppression(boxes,iou_threshold=iou_threshold,obj_threshold=obj_threshold)
 
-    print(final_boxes)
 
     LABELS = ['aeroplane',  'bicycle', 'bird',  'boat',      'bottle',
             'bus',        'car',      'cat',  'chair',     'cow',
@@ -520,5 +519,7 @@ def predict(image):
             'pottedplant','sheep',  'sofa',   'train',   'tvmonitor']
 
     ima = draw_boxes(X_test[0],final_boxes,LABELS,verbose=True)
+    plt.imshow(ima)
+    plt.show()
     return ima
 
