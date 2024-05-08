@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Streaming</title>
+  </head>
+  <body>
+    <h1>Real-time Video Streaming</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="video" accept="video/mp4" />
+      <input type="submit" value="Upload" />
+    </form>
+
+    <h2>Video Stream</h2>
+    <img src="{{ url_for('video_feed') }}" />
+  </body>
+</html>
