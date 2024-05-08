@@ -17,11 +17,6 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
-      "/original_video": {
-        target: "http://localhost:5000/",
-        changeOrigin: true,
-        secure: false,
-      },
     },
     cors: true,
   },

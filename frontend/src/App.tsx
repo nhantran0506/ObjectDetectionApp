@@ -94,12 +94,12 @@ function App() {
               Open Camera
             </button>
           </div> */}
-          <div className="m-3 h-max grid justify-center">
+          <div className="spacing m-3 grid h-max justify-center">
             <form
               action="/upload"
               method="post"
               encType="multipart/form-data"
-              className="w-fit mx-10 flex justify-center"
+              className="mx-10 flex w-fit justify-center gap-2"
             >
               <input
                 className="block h-auto w-full cursor-pointer rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:outline-none"
@@ -113,7 +113,7 @@ function App() {
               <input
                 type="submit"
                 value="Upload"
-                className="hover: rounded-lg border p-2 shadow transition duration-100 ease-in-out hover:bg-black hover:text-white"
+                className="hover: rounded-lg border py-2 px-4 shadow transition duration-100 ease-in-out hover:bg-black hover:text-white"
               />
             </form>
           </div>
